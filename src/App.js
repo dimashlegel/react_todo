@@ -13,9 +13,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
 				{isShowTimer ? <ToDoListClassComp /> : <ToDoList /> }
 					<p>
-					<button onClick={() => setIsShowTimer((boolValue) => !boolValue)}>Toggle Component</button>
+						{/* <button onClick={() => setIsShowTimer((boolValue) => !boolValue)}>Toggle Component</button> */}
 					</p>
 					
       </header>

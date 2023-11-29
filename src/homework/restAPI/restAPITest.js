@@ -1,29 +1,12 @@
-import { useEffect, useState } from "react";
-import { getContactsList } from "./api";
+import { useFetch } from "./hooks/useFetch";
 
 const RestApiTest = () => {
 
-	const [contacts, setContacts] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	
-	const fetchData = async () => {
-		setIsLoading(true);
-		const data = await getContactsList();
-		setContacts(data);
-		setIsLoading(false);
+	const {data : contacts, isLoading, error} = useFetch('contacts');
+
+	if (error) {
+		return <div>Something went wrong:<br />{error}</div>
 	}
-
-	useEffect(() => {
-		// const getContactsList = async () => {
-		// 	const response = await axios.get('contacts');
-		// 	setContacts(response.data);
-		// 	return response.data;
-		// }
-		// getContactsList();
-		fetchData();
-	}, [])
-
-	console.log(contacts);
 
 	return (<>
 		<h1>Phone Book</h1>

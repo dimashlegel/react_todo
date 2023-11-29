@@ -1,16 +1,22 @@
 {
-	"contacts" : [
-		{
-			"id" : 1,
-			"name": "Dima",
-			"lastName": "Shlegel",
-			"about": "from Iziaslav"
-		},
-		{
-			"id" : 2,
-			"name": "Anna",
-			"lastName": "Olgard",
-			"about": "from Kremenchuk"
-		}
-	]
+  "contacts": [
+    {
+      "name": "Anna",
+      "lastName": "Shlegel",
+      "about": "from Kyiv",
+      "id": 1
+    },
+    {
+      "name": "Gerda",
+      "lastName": "Shlegel",
+      "about": "from Kyiv",
+      "id": 2
+    },
+    {
+      "name": "Solomia",
+      "lastName": "Shlegel",
+      "about": "from Kyiv",
+      "id": 3
+    }
+  ]
 }

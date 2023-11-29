@@ -3,8 +3,10 @@
 
 import ToDoList from './homework/todo/ToDoList';
 import ToDoListClassComp from './homework/todo/ToDoListClassComponent';
-import './App.css';
+import RestApiTest from './homework/restAPI/restAPITest';
 import { useState } from 'react';
+
+import './App.css';
 
 function App() {
 
@@ -14,10 +16,12 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-				{isShowTimer ? <ToDoListClassComp /> : <ToDoList /> }
-					<p>
+				{/* {isShowTimer ? <ToDoListClassComp /> : <ToDoList /> } */}
+					{/* <p> */}
 						{/* <button onClick={() => setIsShowTimer((boolValue) => !boolValue)}>Toggle Component</button> */}
-					</p>
+					{/* </p> */}
+
+					<RestApiTest />
 					
       </header>
     </div>

@@ -1,0 +1,16 @@
+{
+	"contacts" : [
+		{
+			"id" : 1,
+			"name": "Dima",
+			"lastName": "Shlegel",
+			"about": "from Iziaslav"
+		},
+		{
+			"id" : 2,
+			"name": "Anna",
+			"lastName": "Olgard",
+			"about": "from Kremenchuk"
+		}
+	]
+}

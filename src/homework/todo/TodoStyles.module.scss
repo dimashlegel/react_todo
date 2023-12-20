@@ -2,6 +2,11 @@
 	color: #b26c6c;
 }
 
+.inputs {
+	display: flex;
+	flex-direction: column;
+}
+
 .input {
 	background-color: #c6c6c670;
 	margin-bottom: 10px;
@@ -11,6 +16,17 @@
 	width: 300px;
 	font-size: 18px;
 	color: #fff;
+	padding: 5px 20px;
+	&::placeholder {
+		color: #fff;
+		font-size: 16px;
+		transition: opacity 0.4s ease;
+	}
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
 }
 
 .text {
@@ -31,15 +47,52 @@
 	&[disabled] {
 		background-color: #5c5c5c;
 	}
+	&_minWidth {
+		min-width: 92px;
+	}
+	&_minWidthDel {
+		min-width: 66px;
+	}
+	&_margin {
+		margin: 0 10px;
+	}
+}
+
+.checkbox {
+	margin-right: 10px;
 }
 
 .mb {
 	margin-bottom: 20px;
 }
 
+.list {
+	padding: 0;
+	margin: 25px 0;
+	width: 300px;
+}
+
 .listItem {
 	// display: inline-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 10px;
+}
+
+.listItemInner {
+	// display: flex;
+	// align-items: center;
+	// justify-content: space-between;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.listItemControls {
+	margin-top: 10px;
+	& button {
+		margin: 0 5px;
+	}
 }
 
 .finishedTask {
@@ -60,4 +113,31 @@
 	font-size: 16px;
 	margin: 0px 0 20px;
 	color: red;
+}
+
+.description {
+	font-size: 16px;
+	color: #fff;
+}
+
+// loader
+
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

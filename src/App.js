@@ -4,6 +4,7 @@
 import ToDoList from './homework/todo/ToDoList';
 import ToDoListClassComp from './homework/todo/ToDoListClassComponent';
 import RestApiTest from './homework/restAPI/restAPITest';
+import RestAPIReactQuery from './homework/restAPI/restAPI_react_query';
 import { useState } from 'react';
 
 import './App.css';
@@ -16,12 +17,13 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-				{/* {isShowTimer ? <ToDoListClassComp /> : <ToDoList /> } */}
-					{/* <p> */}
-						{/* <button onClick={() => setIsShowTimer((boolValue) => !boolValue)}>Toggle Component</button> */}
-					{/* </p> */}
+				{isShowTimer ? <ToDoListClassComp /> : <ToDoList /> }
+					{/* <p>
+						<button onClick={() => setIsShowTimer((boolValue) => !boolValue)}>Toggle Component</button>
+					</p> */}
 
-					<RestApiTest />
+					{/* <RestApiTest /> */}
+					{/* <RestAPIReactQuery /> */}
 					
       </header>
     </div>

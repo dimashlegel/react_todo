@@ -1,12 +1,6 @@
 {
   "contacts": [
     {
-      "name": "Anna",
-      "lastName": "Shlegel",
-      "about": "from Kyiv",
-      "id": 1
-    },
-    {
       "name": "Gerda",
       "lastName": "Shlegel",
       "about": "from Kyiv",
@@ -19,8 +13,8 @@
       "id": 3
     },
     {
-      "name": "Solia",
-      "lastName": "Test",
+      "name": "Solomia",
+      "lastName": "Shlegel",
       "about": "from Kyiv",
       "id": 4
     }

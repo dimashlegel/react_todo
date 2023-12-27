@@ -38,9 +38,15 @@
 	background-color: #b26c6c;
 	color: #000;
 	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
 	border: none;
 	border-radius: 6px;
 	height: 30px;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	&:hover {
 		background-color: #bb5f5f;
 	}
@@ -54,7 +60,7 @@
 		min-width: 66px;
 	}
 	&_margin {
-		margin: 0 10px;
+		margin: 0 5px;
 	}
 }
 
@@ -140,4 +146,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.loaderListPosition {
+	margin: 50px 0;
 }

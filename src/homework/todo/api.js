@@ -3,9 +3,16 @@ import axios from "axios";
 axios.defaults.baseURL = 'http://localhost:3030/';
 
 export const getTodosListAPI = async () => {
-	console.log("api get data");
+	console.log("api get data list");
 	const todos = await axios.get('todos');
 	return todos.data;
+}
+
+export const getTodoAPI = async (id) => {
+	console.log("api id get", id);
+	const todo = await axios.get(`todos/${id}`);
+	console.log(todo);
+	return todo.data;
 }
 
 export const addTodoAPI = async (payload) => {
@@ -25,3 +32,4 @@ export const putTodoAPI = async (payload) => {
 	const resp = await axios.put(`todos/${payload.id}`, payload);
 	console.log('resp', resp);
 }
+

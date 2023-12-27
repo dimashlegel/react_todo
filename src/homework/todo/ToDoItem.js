@@ -2,6 +2,7 @@
 import Checkbox from "./Checkbox";
 import ButtonComponent from "./ButtonComponent";
 import Loader from "./Loader";
+import { Link } from "react-router-dom";
 
 
 
@@ -28,10 +29,25 @@ const ToDoItem = (props) => {
 			</div>
 
 			<div className={props.styles.listItemControls}>
-				<ButtonComponent styles={props.styles} type="button" id={props.id} text="Edit" 
+				{/* <ButtonComponent styles={props.styles} type="button" id={props.id} text="Edit" 
 					isDissableEditBtn={props.isDissableEditBtn} 
 					editTodoHandler={props.editTodoHandler}>
-				</ButtonComponent>
+				</ButtonComponent> */}
+
+				<Link to={`${props.id}`} className={`${props.styles.button} ${props.styles.button_minWidthDel}`} 
+				onClick={() => props.editTodoHandler(props.id)} 
+				disabled={props.isDissableEditBtn.includes(props.id)}  >
+					{props.isDissableEditBtn.includes(props.id) ? <Loader styles={props.styles} /> : 'Edit'}
+				</Link>
+
+
+				{/* <button className={`${props.styles.button} ${props.styles.button_minWidthDel}`} 
+		type={props.type} 
+		disabled={props.isDissableEditBtn.includes(props.id)}  
+		onClick={() => props.editTodoHandler(props.id)}>
+			
+		</button> */}
+
 
 				<ButtonComponent styles={props.styles} type="button" id={props.id} text="Delete" 
 					isDissableDeleteBtn={props.isDissableDeleteBtn} 
@@ -40,7 +56,7 @@ const ToDoItem = (props) => {
 			</div>
 		</div>
 
-		<div style={editMode} >
+		{/* <div style={editMode} >
 		<p>Edit Title</p>
 		<input
       type="text"
@@ -76,7 +92,7 @@ const ToDoItem = (props) => {
 		onClick={() => props.cancelTodoHandler(props.id)}>
 			Cancel
 		</button>
-		</div>
+		</div> */}
 
 		 </li>
 		{props.children}

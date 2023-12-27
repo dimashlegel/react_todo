@@ -20,7 +20,6 @@ const EditBtn = (props) => {
 
 const ButtonComponent = (props) => {
 	return (props.text === 'Delete' ? DeleteBtn(props) : EditBtn(props));
-	// return (props.text === 'Delete' ? <DeleteBtn /> : <EditBtn />);
 } 
 
 export default ButtonComponent;
